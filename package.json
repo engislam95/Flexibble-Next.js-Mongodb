@@ -1,0 +1,34 @@
+{
+  "name": "flexibble",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "autoprefixer": "10.4.16",
+    "cloudinary": "^1.41.0",
+    "graphql-request": "^6.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "next": "13.4.6",
+    "next-auth": "^4.24.3",
+    "postcss": "8.4.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.2.2", 
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.3"
+  },
+  "devDependencies": {
+    "@grafbase/sdk": "^0.0.25"
+  }
+}
