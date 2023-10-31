@@ -18,7 +18,7 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
         <div className="flex-1 flex items-start gap-5 w-full max-xs:flex-col">
           <Link href={renderLink()}>
             <Image
-              src={session?.user?.image as string}
+              src={projectDetails?.creator?.avatarUrl as string}
               width={50}
               height={50}
               alt="profile"
