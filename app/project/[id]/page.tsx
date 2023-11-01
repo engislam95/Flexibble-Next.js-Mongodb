@@ -11,7 +11,7 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
   if (!projectDetails)
     return <p className="no-result-text">Failed to fetch project info</p>;
 
-  const renderLink = () => `/profile/${session?.user.id}`;
+  const renderLink = () => `/profile/${projectDetails?.creator?._id}`;
   return (
     <Modal>
       <section className="flexBetween gap-y-8 max-w-4xl max-xs:flex-col w-full">
