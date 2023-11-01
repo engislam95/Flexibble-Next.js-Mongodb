@@ -31,7 +31,7 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
               {projectDetails?.title}
             </p>
             <div className="user-info">
-              <Link href={renderLink()}>{session?.user?.name}</Link>
+              <Link href={renderLink()}>{projectDetails?.creator?.name}</Link>
               <Image src="/dot.svg" width={4} height={4} alt="dot" />
               <Link
                 href={`/?category=${projectDetails.category}`}
