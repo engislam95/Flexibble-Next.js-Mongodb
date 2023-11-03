@@ -30,8 +30,7 @@ export const fetchToken = async () => {
 
 export const createNewProject = async (
   form: ProjectForm,
-  creatorId: string,
-  token: string
+  creatorId: string
 ) => {
   const imageUrl = await uploadImage(form.image);
 
@@ -64,42 +63,40 @@ export const createNewProject = async (
 
 export const getProjectDetails = async (id: string) => {
   try {
-    const response = await fetch(`${serverUrl}/api/project/${id}`)
+    const response = await fetch(`${serverUrl}/api/project/${id}`);
     if (response.ok) {
       return response.json();
     }
   } catch (error) {
     throw error;
   }
-}
+};
 
 export const getUserProjects = async (id: string, last?: number) => {
   try {
-    const response = await fetch(`${serverUrl}/api/users/${id}/projects`)
+    const response = await fetch(`${serverUrl}/api/users/${id}/projects`);
     if (response.ok) {
       return response.json();
     }
   } catch (error) {
     throw error;
   }
-}
+};
 
 export const deleteProject = async (id: string) => {
   try {
     const response = await fetch(`${serverUrl}/api/project/${id.toString()}`, {
-      method: "DELETE"
-    })
+      method: "DELETE",
+    });
     if (response.ok) {
       return response.json();
     }
   } catch (error) {
     throw error;
   }
-}
-
+};
 
 export const updateProject = async (project: ProjectForm, id: string) => {
-
   function isBase64DataURL(value: string) {
     const base64Regex = /^data:image\/[a-z]+;base64,/;
     return base64Regex.test(value);
@@ -122,13 +119,11 @@ export const updateProject = async (project: ProjectForm, id: string) => {
       body: JSON.stringify({
         project,
       }),
-    })
+    });
     if (response.ok) {
       return response.json();
     }
   } catch (error) {
     throw error;
   }
-}
-
-
+};
